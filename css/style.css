@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  counter-reset: numbers;
+  background: #16a085;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: -webkit-box;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+input[type=checkbox] {
+  position: absolute;
+  text-indent: -9999px;
+  opacity: 0;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 64px);
+  grid-auto-rows: 64px;
+  margin: auto;
+  -webkit-box-ordinal-group: 3;
+          order: 2;
+  background: rgba(0,0,0,0.3);
+  padding: 1rem;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.number-box {
+  display: -webkit-box;
+  display: flex;
+}
+.number-box label{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  background: #f1c40f;
+  border-radius: 50%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(.86,-0.41,.38,1.48);
+          transition-timing-function: cubic-bezier(.86,-0.41,.38,1.48);
+  position: relative;
+  cursor: pointer;
+}
+.number-box input:checked {
+  counter-increment: numbers;
+}
+.number-box label::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: calc(50% - 4px);
+  height: 8px;
+  width: 0;
+  background: rgba(255,255,255,0.5);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.number-box input:checked + label {
+  background: #2ecc71;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  font-weight: bold;
+}
+.number-box input:checked + label::before {
+  width: 64px;
+}
+.count {
+  -webkit-box-ordinal-group: 2;
+          order: 1;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-top: 1rem;
+}
+.count::after {
+  content: counter(numbers);
+}
