@@ -1,3 +1,14 @@
+<?php
+  $number = 50;
+  if(isset($_GET['no'])){
+    if(is_numeric($_GET['no'])){
+      $number = $_GET['no'];
+    }else{
+      $number = 50;
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>Housie UI Interface</title>
   <!-- Favicon -->
   <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -66,8 +77,8 @@
                               </div>  
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-white ml-auto" data-dismiss="modal">Ok</button>
-                                <!-- <button type="button" class="btn btn-link text-white " data-dismiss="modal">Close</button> -->
+                              <button type="button" class="btn btn-white btn-sm" onClick='return nextNumber();'>Next Number</button>
+                              <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
                             </div> 
                           </div>
                         </div>
@@ -107,56 +118,13 @@
             <div class="card-body">
               <div class="hpusie-board-container">
                 <div class="board">
-                  <div class="number-box"><input type="checkbox" id="number-1"><label for="number-1">1</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-2"><label for="number-2">2</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-3"><label for="number-3">3</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-4"><label for="number-4">4</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-5"><label for="number-5">5</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-6"><label for="number-6">6</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-7"><label for="number-7">7</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-8"><label for="number-8">8</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-9"><label for="number-9">9</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-10"><label for="number-10">10</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-11"><label for="number-11">11</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-12"><label for="number-12">12</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-13"><label for="number-13">13</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-14"><label for="number-14">14</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-15"><label for="number-15">15</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-16"><label for="number-16">16</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-17"><label for="number-17">17</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-18"><label for="number-18">18</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-19"><label for="number-19">19</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-20"><label for="number-20">20</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-21"><label for="number-21">21</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-22"><label for="number-22">22</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-23"><label for="number-23">23</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-24"><label for="number-24">24</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-25"><label for="number-25">25</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-26"><label for="number-26">26</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-27"><label for="number-27">27</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-28"><label for="number-28">28</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-29"><label for="number-29">29</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-30"><label for="number-30">30</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-31"><label for="number-31">31</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-32"><label for="number-32">32</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-33"><label for="number-33">33</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-34"><label for="number-34">34</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-35"><label for="number-35">35</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-36"><label for="number-36">36</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-37"><label for="number-37">37</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-38"><label for="number-38">38</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-39"><label for="number-39">39</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-40"><label for="number-40">40</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-41"><label for="number-41">41</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-42"><label for="number-42">42</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-43"><label for="number-43">43</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-44"><label for="number-44">44</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-45"><label for="number-45">45</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-46"><label for="number-46">46</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-47"><label for="number-47">47</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-48"><label for="number-48">48</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-49"><label for="number-49">49</label></div>
-                  <div class="number-box"><input type="checkbox" id="number-50"><label for="number-50">50</label></div>
+
+                  <?php
+                  for($i=1; $i<=$number; $i++){
+                    echo '<div class="number-box"><input type="checkbox" id="number-'.$i.'"><label for="number-'.$i.'">'.$i.'</label></div>';
+                  }
+                  ?>
+                  
                 </div>
               </div>
             </div>
@@ -282,15 +250,21 @@
 
 
   <script>
+    var final_no = <?= $number; ?>;
     var numbers_array = Array();
-    var number = Math.floor(Math.random() * 50) + 1;
+    var number = Math.floor(Math.random() * final_no) + 1;
     $('.next-number-btn').on('click',function(){
       nextNumber();
     }) 
 
     function nextNumber(){
-      var number = Math.floor(Math.random() * 50) + 1;
-      checkReset(number);
+      if(numbers_array.length != final_no){
+        var number = Math.floor(Math.random() * final_no) + 1;
+        return checkReset(number);
+      }else{
+        $('.next-number-js').html('END');
+        return false;
+      }
     }
 
     function checkReset(number){
@@ -298,6 +272,7 @@
       var checkBox = document.getElementById("number-"+number);
       // debugger;
       if (checkBox.checked == true){
+        var number = Math.floor(Math.random() * final_no) + 1;
         return checkReset(number);
       } else {
         numbers_array.push(number);
@@ -306,10 +281,6 @@
         return true;
       }
     }
-
-
-    
-
     $(document).keypress(function(event){
       var keycode = (event.keyCode ? event.keyCode : event.which);
       console.log(keycode);
